@@ -1,0 +1,110 @@
+body{
+    font-family: Arial, sans-serif;
+    background-image: url("logo.png");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: lightblue;
+    color: black;
+}
+
+.header a{
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.header a:hover{
+    color: blue;
+}
+
+.hi{
+    color: red;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.login{
+    text-align: center;
+    margin: 20px;
+    font: bold 16px Arial, sans-serif;
+}
+
+.login input{
+    padding: 8px;
+    margin: 5px;
+}
+
+button{
+    background-color: #007bff;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.side{
+    display: flex;
+    justify-content:center;
+    gap: 80px;
+    margin: 20px 0;
+}
+
+.details,
+.card,
+.attendance,
+.notice{
+    width: 360px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.details{ background-color: yellow; }
+.card{ background-color: lightgreen; }
+.attendance{ background-color: lightblue; }
+.notice{ background-color: pink; }
+
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2;
+}
+
+.sidenav a{
+    padding: 10px 25px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 18px;
+}
+
+.sidenav a:hover{
+    background-color: #575757;
+}
+
+.closebtn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+
