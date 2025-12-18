@@ -93,7 +93,24 @@ button{
     display: block;
     font-size: 18px;
 }
-
+.image{
+    align-items: center;
+    justify-content: center;
+    margin-left: 500px;
+}
+.audio{
+    align-items: center;
+    justify-content: center;
+    margin-left: 500px;
+}
+.video{
+    align-items: center;
+    justify-content: center;
+    margin-left: 500px;
+}
+.pdf{
+    width:100%;
+}
 .sidenav a:hover{
     background-color: #575757;
 }
