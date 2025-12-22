@@ -1,11 +1,27 @@
 <!DOCTYPE html>
     <head>
-        <title class="hi">Student Portal</title>
+        <style>
+            .internal-table{
+                border-collapse:collapse;
+                border-radius:15px;
+                padding:10px;
+                margin:20px auto;
+            }
+            .internal-th,.internal-td{
+                border:2px solid black;
+                border-collapse:collapse;
+                border-radius:15px;
+                padding:10px;
+
+            }
+        </style>
+        <title>Student Portal</title>
         <link rel="stylesheet" type="text/css" href="styler.css">
     </head>
     <body>
+        <input type="checkbox" id="menu-toggle">
         <div id="mySidenav" class="sidenav">
-            <span class="closebtn" onclick="closeNav()">&times;</span>
+            <label for="menu-toggle" class="closebtn">&times;</label>
             <a href="#">Home</a>
             <a href="#">Profile</a>
             <a href="#">Attendance</a>
@@ -14,7 +30,7 @@
         </div>
 
         <div class="header">
-            <span class="menu-btn" onclick="openNav()">&#9776;</span>
+           <label for="menu-toggle" class="menu-btn">&#9776;</label>
             <div>
                 <a href="#">Home</a>
                 <a href="#">Login</a>
@@ -22,11 +38,11 @@
             </div>
         </div>
 
-        <h1 class="hi">Welcome to Student Portal</h1>
+        <h1 style="color:red; text-align:center;">Welcome to Student Portal</h1>
         
         <div class="login">
-            <p>Enter ID NUMBER: <input type="text" placeholder="ID NUMBER"><br></p>
-            <p>Enter Password:<input type="password" placeholder="PASSWORD"><br></p>
+            ID Number: <input type="text" placeholder="ID NUMBER"><br>
+            Password: <input type="password" placeholder="PASSWORD"><br><br>
             <button>Login</button>
         </div>
         <div class="side">
@@ -67,44 +83,126 @@
         <img src="logo.png" alt="College Logo" width="360" height="200" class="image"><br>
         <audio controls autoplay muted class="audio"><source src="C:\Users\SHEKAR BABU\Music\128-Abrars Entry Jamal Kudu - Animal 128 Kbps.mp3"></audio><br>
         <video width="360" height="240" controls class="video"><source src="C:\Users\SHEKAR BABU\Videos\My Reels\Video (413).mp4"></video><br>
-        <iframe src="https://www.thapatechnical.com" height="240" width="360" title="SMS Portal"></iframe><br>
-        <iframe src="c:\Users\SHEKAR BABU\Documents\COMPLETE_HTML_CHEAT_SHEET.pdf" title="html pdf" class="pdf"></iframe><br><br>
         <div style="display:flex; justify-content:center; gap:20px;">
             <iframe src="https://www.thapatechnical.com" width="500" height="500" style="border:2px solid black; border-radius: 20px;"></iframe>
             <iframe src="c:\Users\SHEKAR BABU\Documents\COMPLETE_HTML_CHEAT_SHEET.pdf" width="500" height="500" style="border:2px solid black; border-radius: 20px;"></iframe>
+        </div><br>
+        <div>
+            <table style="border-collapse:collapse; border-radius: 15px; margin: 20px auto;">
+                <tr>
+                    <th style="border:1px solid black; padding:10px;">subject</th>
+                    <th style="border:1px solid black; padding:10px;">marks</th>
+                    <th style="border:1px solid black; padding:10px;">grade</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black; padding:10px;">Web Technologies</td>
+                    <td style="border:1px solid black; padding:10px;">85</td>
+                    <td style="border:1px solid black; padding:10px;">A</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black; padding:10px;">Digital Signal Processing</td>
+                    <td style="border:1px solid black; padding:10px;">80</td>
+                    <td style="border:1px solid black; padding:10px;">B</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black; padding:10px;">Compiler Design</td>
+                    <td style="border:1px solid black; padding:10px;">90</td>
+                    <td style="border:1px solid black; padding:10px;">Ex</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black; padding:10px;">COA</td>
+                    <td style="border:1px solid black; padding:10px;">75</td>
+                    <td style="border:1px solid black; padding:10px;">C</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid black; padding:10px;">IOR</td>
+                    <td style="border:1px solid black; padding:10px;">88</td>
+                    <td style="border:1px solid black; padding:10px;">A</td>
+                </tr>
+            </table>
+        </div><br>
+        <div>
+            <table class="internal-table">
+                <tr>
+                    <th class="internal-th">Subject</th>
+                    <th class="internal-th">Attendance</th>
+                </tr>
+                <tr>
+                    <td class="internal-td">Web Technologies</td>
+                    <td class="internal-td">81%</td>
+                </tr>
+                <tr>
+                    <td class="internal-td">Digital Signal Processing</td>
+                    <td class="internal-td">94%</td>
+                </tr>
+                <tr>
+                    <td class="internal-td">Compiler Desing</td>
+                    <td class="internal-td">79%</td>
+                </tr>
+                <tr>
+                    <td class="internal-td">COA</td>
+                    <td class="internal-td">85%</td>
+                </tr>
+            </table>
         </div>
-
-
-        <table>
-            <tr>
-                <th>subject</th>
-                <th>marks</th>
-                <th>grade</th>
-            </tr>
-            <tr>
-                <td>Web Technologies</td>
-                <td>85</td>
-                <td>A</td>
-            </tr>
-            <tr>
-                <td>Digital Signal Processing</td>
-                <td>80</td>
-                <td>B</td>
-            </tr>
-            <tr>
-                <td>Compiler Design</td>
-                <td>90</td>
-                <td>Ex</td>
-            </tr>
-            <tr>
-                <td>COA</td>
-                <td>75</td>
-                <td>C</td>
-            </tr>
-            <tr>
-                <td>IOR</td>
-                <td>88</td>
-                <td>A</td>
-            </tr>
-        </table>
+        <br>
+        <div style="display:flex;justify-content:center;">
+            <table style=" background-color: aquamarine;" class="cells">
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <td>Sem Registration</td>
+                    <td>19th Dec</td>
+                </tr>
+                <tr>
+                    <td>Christmas Holiday</td>
+                    <td>25th Dec</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <form>
+                <fieldset style="border-radius: 15px;">
+                    <legend>Student Registration Form</legend>
+                    <label for ="fname">First Name:</label>
+                    <input type="text" placeholder="Enter your Name " id="fname" name="fname"><br>
+                    <label for ="fname">Last Name:</label>
+                    <input type="text" placeholder="Enter your Name " id="lname" name="lname"><br><br>
+                    <label for="gender">Gender:</label><br>
+                    <input type="radio" id="Male" name="gender">
+                    <label for="Male">Male:</label><br>
+                    <input type="radio" id="Female" name="gender">
+                    <label for="Female">Female:</label><br>
+                    <input type="radio" id="other" name="gender">
+                    <label for="other">Other:</label><br><br>
+                    <label for="branch">Choose your Branch:</label><br>
+                    <input type="checkbox" id="branch" name="branch" value="CSE">
+                    <label for="branch">CSE</label><br>
+                    <input type="checkbox" id="branch" name="branch" value="ECE">
+                    <label for="branch">ECE</label><br>
+                    <input type="checkbox" id="branch" name="branch" value="MECH">
+                    <label for="branch">MECH</label><br><br>
+                    <label for="year">Select Year:</label>
+                    <select id="year" name="year">
+                        <option value="E-1">E-1</option>
+                        <option value="E-2">E-2</option>
+                        <option value="E-3">E-3</option>
+                        <option value="E-4">E-4</option>
+                    </select><br>
+                    <!-- Datalist-->
+                     <label for="course">Choose your Course:</label><br>
+                    <input list="courses" name="course">
+                    <datalist id="courses">
+                        <option value="AI">
+                        <option value="ML">
+                        <option value="Cyber Security">
+                        <option value="Data Scientist">
+                        <option value="Web Developer">
+                    </datalist><br><br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </div>
     </body>

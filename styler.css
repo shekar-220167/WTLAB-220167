@@ -1,7 +1,8 @@
 body{
     font-family: Arial, sans-serif;
-    background-image: url("logo.png");
-    background-size: cover;
+    /* background-image: url("logo.png"); 
+    background-size: cover;*/
+    background-color: #f2f2f2;
     margin: 0;
     padding: 0;
 }
@@ -26,10 +27,42 @@ body{
     color: blue;
 }
 
-.hi{
-    color: red;
-    text-align: center;
-    margin: 20px 0;
+.menu-btn{
+    font-size: 26px;
+    cursor: pointer;
+} 
+
+#menu-toggle{
+    display: none;
+}
+
+#menu-toggle:checked ~ .sidenav{
+    width: 250px;
+}
+
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2;
+}
+
+.sidenav a{
+    padding: 10px 25px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 18px;
+}
+
+.sidenav a:hover{
+    background-color: #575757;
 }
 
 .login{
@@ -55,17 +88,20 @@ button{
 .side{
     display: flex;
     justify-content:center;
-    gap: 80px;
-    margin: 20px 0;
+    /* gap: 80px;
+    margin: 20px 0; */
+    gap: 30px;
+    margin: 20px;
+    flex-wrap: wrap;
 }
 
 .details,
 .card,
 .attendance,
 .notice{
-    width: 360px;
-    padding: 10px;
-    border-radius: 10px;
+    width: 320px;
+    padding: 15px;
+    border-radius: 15px;
 }
 
 .details{ background-color: yellow; }
@@ -73,26 +109,6 @@ button{
 .attendance{ background-color: lightblue; }
 .notice{ background-color: pink; }
 
-.sidenav{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    z-index: 2;
-}
-
-.sidenav a{
-    padding: 10px 25px;
-    text-decoration: none;
-    color: white;
-    display: block;
-    font-size: 18px;
-}
 .image{
     align-items: center;
     justify-content: center;
@@ -108,16 +124,23 @@ button{
     justify-content: center;
     margin-left: 500px;
 }
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+
+.cells{
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px auto;
+    background-color: aquamarine;
 }
-.pdf{
-    width:100%;
+
+.cells th,
+.cells td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
 }
-.sidenav a:hover{
-    background-color: #575757;
-}
+
+
 
 .closebtn{
     position: absolute;
@@ -128,4 +151,11 @@ table, th, td {
     color: white;
 }
 
+form{
+    width: 60%;
+    margin: 30px auto;
+    background-color: grey;
+    padding: 20px;
+    border-radius: 15px;
+}
 
