@@ -1,20 +1,6 @@
 <!DOCTYPE html>
+<html>
     <head>
-        <style>
-            .internal-table{
-                border-collapse:collapse;
-                border-radius:15px;
-                padding:10px;
-                margin:20px auto;
-            }
-            .internal-th,.internal-td{
-                border:2px solid black;
-                border-collapse:collapse;
-                border-radius:15px;
-                padding:10px;
-
-            }
-        </style>
         <title>Student Portal</title>
         <link rel="stylesheet" type="text/css" href="styler.css">
     </head>
@@ -23,9 +9,9 @@
         <div id="mySidenav" class="sidenav">
             <label for="menu-toggle" class="closebtn">&times;</label>
             <a href="#">Home</a>
-            <a href="#">Profile</a>
-            <a href="#">Attendance</a>
-            <a href="#">Marks</a>
+            <a href="profile.html">Profile</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="marks.html">Marks</a>
             <a href="#">Logout</a>
         </div>
 
@@ -33,135 +19,63 @@
            <label for="menu-toggle" class="menu-btn">&#9776;</label>
             <div>
                 <a href="#">Home</a>
-                <a href="#">Login</a>
+                <a href="login.html" class="login-btn">Login</a>
                 <a href="#">About</a>
             </div>
         </div>
 
         <h1 style="color:red; text-align:center;">Welcome to Student Portal</h1>
         
-        <div class="login">
-            ID Number: <input type="text" placeholder="ID NUMBER"><br>
-            Password: <input type="password" placeholder="PASSWORD"><br><br>
-            <button>Login</button>
-        </div>
-        <div class="side">
-            <div class="details">
-                <h1>Student Details</h1>
-                <p><b>Student Name:</b>Shekar Babu</p>
-                <p><b>ID NUMBER:</b>N220167</p>
-                <p><b>Branch:</b>CSE</p>
-                <p><b>Year:</b>E-2</p>
+        <!-- SLIDER -->
+        <section class="slideshow">
+            <div class="slide">
+                <img src="slide1.jpg" alt="">
+                <p>College life isn’t freedom. It’s deadlines.</p>
             </div>
-            <div class="card">
-                <h2>Subjects in E-2</h2>
-                <ul>
-                    <li>WT</li>
-                    <li>DSP</li>
-                    <li>CD</li>
-                    <li>COA</li>
-                    <li>IOR</li>
-                </ul>
+            <div class="slide">
+                <img src="slide2.jpg" alt="">
+                <p>Your first job teaches faster than college ever did.</p>
             </div>
-        </div>
-        <div class="side">
-            <div class="attendance">
-                <h1>Attendance</h1>
-                <p>Web Technologies: 85%</p>
-                <p>Digital Signal Processing: 80%</p>
-                <p>Compiler Design: 90%</p>
-                <p>COA: 75%</p>
-                <p>IOR: 88%</p>
+            <div class="slide">
+                <img src="slide3.jpg" alt="">
+                <p>Projects succeed on planning, not motivation.</p>
             </div>
-            <div class="notice">
-                <h2>Notice Board</h2>
-                <p>1.Sem Registration is Extended to 19th Dec</p>
-                <p>2.Holiday is on 25th Dec for Christmas</p>
-                <p>3.Today we have lab on Web Technologies: Build a Website</p>
-            </div>
-        </div>
-        <img src="logo.png" alt="College Logo" width="360" height="200" class="image"><br>
-        <audio controls autoplay muted class="audio"><source src="C:\Users\SHEKAR BABU\Music\128-Abrars Entry Jamal Kudu - Animal 128 Kbps.mp3"></audio><br>
-        <video width="360" height="240" controls class="video"><source src="C:\Users\SHEKAR BABU\Videos\My Reels\Video (413).mp4"></video><br>
-        <div style="display:flex; justify-content:center; gap:20px;">
-            <iframe src="https://www.thapatechnical.com" width="500" height="500" style="border:2px solid black; border-radius: 20px;"></iframe>
-            <iframe src="c:\Users\SHEKAR BABU\Documents\COMPLETE_HTML_CHEAT_SHEET.pdf" width="500" height="500" style="border:2px solid black; border-radius: 20px;"></iframe>
-        </div><br>
-        <div>
-            <table style="border-collapse:collapse; border-radius: 15px; margin: 20px auto;">
-                <tr>
-                    <th style="border:1px solid black; padding:10px;">subject</th>
-                    <th style="border:1px solid black; padding:10px;">marks</th>
-                    <th style="border:1px solid black; padding:10px;">grade</th>
-                </tr>
-                <tr>
-                    <td style="border:1px solid black; padding:10px;">Web Technologies</td>
-                    <td style="border:1px solid black; padding:10px;">85</td>
-                    <td style="border:1px solid black; padding:10px;">A</td>
-                </tr>
-                <tr>
-                    <td style="border:1px solid black; padding:10px;">Digital Signal Processing</td>
-                    <td style="border:1px solid black; padding:10px;">80</td>
-                    <td style="border:1px solid black; padding:10px;">B</td>
-                </tr>
-                <tr>
-                    <td style="border:1px solid black; padding:10px;">Compiler Design</td>
-                    <td style="border:1px solid black; padding:10px;">90</td>
-                    <td style="border:1px solid black; padding:10px;">Ex</td>
-                </tr>
-                <tr>
-                    <td style="border:1px solid black; padding:10px;">COA</td>
-                    <td style="border:1px solid black; padding:10px;">75</td>
-                    <td style="border:1px solid black; padding:10px;">C</td>
-                </tr>
-                <tr>
-                    <td style="border:1px solid black; padding:10px;">IOR</td>
-                    <td style="border:1px solid black; padding:10px;">88</td>
-                    <td style="border:1px solid black; padding:10px;">A</td>
-                </tr>
-            </table>
-        </div><br>
-        <div>
-            <table class="internal-table">
-                <tr>
-                    <th class="internal-th">Subject</th>
-                    <th class="internal-th">Attendance</th>
-                </tr>
-                <tr>
-                    <td class="internal-td">Web Technologies</td>
-                    <td class="internal-td">81%</td>
-                </tr>
-                <tr>
-                    <td class="internal-td">Digital Signal Processing</td>
-                    <td class="internal-td">94%</td>
-                </tr>
-                <tr>
-                    <td class="internal-td">Compiler Desing</td>
-                    <td class="internal-td">79%</td>
-                </tr>
-                <tr>
-                    <td class="internal-td">COA</td>
-                    <td class="internal-td">85%</td>
-                </tr>
-            </table>
-        </div>
-        <br>
+        </section>
+
         <div style="display:flex;justify-content:center;">
             <table style=" background-color: aquamarine;" class="cells">
                 <tr>
-                    <th>Event</th>
+                    <th>Notice</th>
                     <th>Date</th>
                 </tr>
                 <tr>
-                    <td>Sem Registration</td>
-                    <td>19th Dec</td>
+                    <td>RGUKT Semester Registration Extended</td>
+                    <td>19 Dec</td>
                 </tr>
                 <tr>
-                    <td>Christmas Holiday</td>
-                    <td>25th Dec</td>
+                    <td>Christmas Holiday – RGUKT Campuses Closed</td>
+                    <td>25 Dec</td>
+                </tr>
+                <tr>
+                    <td>Mid-Term Examinations Schedule Released</td>
+                    <td>28 Dec</td>
+                </tr>
+                <tr>
+                    <td>RGUKT Scholarship Verification Process Started</td>
+                    <td>02 Jan</td>
+                </tr>
+                <tr>
+                    <td>Online Fee Payment Last Date for E2 Students</td>
+                    <td>05 Jan</td>
                 </tr>
             </table>
         </div>
+        <div style="display:flex;justify-content:center;">
+    <table class="cells">
+        
+    </table>
+</div>
+
         <div>
             <form>
                 <fieldset style="border-radius: 15px;">
@@ -206,3 +120,6 @@
             </form>
         </div>
     </body>
+
+</html>
+    
