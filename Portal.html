@@ -19,7 +19,8 @@
            <label for="menu-toggle" class="menu-btn">&#9776;</label>
             <div>
                 <a href="#">Home</a>
-                <a href="login.html" class="login-btn">Login</a>
+                <a href="login.html" class="login-btn">Sign In</a>
+                <!--<a href="login.html" class="login-btn">Login</a>-->
                 <a href="#">About</a>
             </div>
         </div>
@@ -71,36 +72,35 @@
             </table>
         </div>
         <div>
-            <form>
-                <fieldset style="border-radius: 15px;">
-                    <legend>Student Registration Form</legend>
-                    <label for ="fname">First Name:</label>
-                    <input type="text" placeholder="Enter your Name " id="fname" name="fname"><br>
-                    <label for ="fname">Last Name:</label>
-                    <input type="text" placeholder="Enter your Name " id="lname" name="lname"><br><br>
-                    <label for="gender">Gender:</label><br>
-                    <input type="radio" id="Male" name="gender">
-                    <label for="Male">Male:</label><br>
-                    <input type="radio" id="Female" name="gender">
-                    <label for="Female">Female:</label><br>
-                    <input type="radio" id="other" name="gender">
-                    <label for="other">Other:</label><br><br>
-                    <label for="branch">Choose your Branch:</label><br>
-                    <input type="checkbox" id="branch" name="branch" value="CSE">
-                    <label for="branch">CSE</label><br>
-                    <input type="checkbox" id="branch" name="branch" value="ECE">
-                    <label for="branch">ECE</label><br>
-                    <input type="checkbox" id="branch" name="branch" value="MECH">
-                    <label for="branch">MECH</label><br><br>
-                    <label for="year">Select Year:</label>
-                    <select id="year" name="year">
+            <form action="register.php" method="POST">
+                <fieldset style="border-radius:15px;">
+                    <legend>Student Registration</legend>
+
+                    First Name:
+                    <input type="text" name="fname" placeholder="First Name" required><br><br>
+
+                    Last Name:
+                    <input type="text" name="lname" placeholder="Last Name" required><br><br>
+
+                    Gender:<br>
+                    <input type="radio" name="gender" value="Male"> Male<br>
+                    <input type="radio" name="gender" value="Female"> Female<br>
+                    <input type="radio" name="gender" value="Other"> Other<br><br>
+
+                    Branch:<br>
+                    <input type="checkbox" name="branch[]" value="CSE"> CSE<br>
+                    <input type="checkbox" name="branch[]" value="ECE"> ECE<br>
+                    <input type="checkbox" name="branch[]" value="MECH"> MECH<br><br>
+
+                    Year:
+                    <select name="year">
                         <option value="E-1">E-1</option>
                         <option value="E-2">E-2</option>
                         <option value="E-3">E-3</option>
                         <option value="E-4">E-4</option>
-                    </select><br>
-                    <!-- Datalist-->
-                     <label for="course">Choose your Course:</label><br>
+                    </select><br><br>
+
+                    Course:
                     <input list="courses" name="course">
                     <datalist id="courses">
                         <option value="AI">
@@ -109,10 +109,15 @@
                         <option value="Data Scientist">
                         <option value="Web Developer">
                     </datalist><br><br>
-                    <input type="submit" value="Submit">
+
+                    <input type="submit" value="Register">
                 </fieldset>
             </form>
         </div>
+        <script>
+            cgpa=(a,b) => (a+b)/2;
+            let avg=cgpa(8,9)
+        </script>
     </body>
 
 </html>
