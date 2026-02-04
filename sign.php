@@ -1,25 +1,31 @@
 <?php
-// Receive signup data
-$id = $_POST['id'];
-$password = $_POST['password'];
+$id = $_POST['id'] ?? '';
+$password = $_POST['password'] ?? '';
 
-// Connect to MySQL (shekardb)
 $conn = mysqli_connect("127.0.0.1", "root", "", "shekardb", 3307);
-// ⚠️ Change port if your MySQL uses 3307 or others
 
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("Database connection failed");
 }
 
-// Insert user into database
-$sql = "INSERT INTO users (id, password)
-        VALUES ('$id', '$password')";
+$check = "SELECT id FROM login WHERE id='$id'";
+$result = mysqli_query($conn, $check);
 
-if (mysqli_query($conn, $sql)) {
-    echo "Account Created Successfully <br>";
-    echo "<a href='login.html'>Go to Login</a>";
+if (!$result) {
+    die("Query failed");
+}
+
+if (mysqli_num_rows($result) > 0) {
+    die("Account already exists. Please login.");
+}
+
+$insert = "INSERT INTO login (id, password) VALUES ('$id', '$password')";
+
+if (mysqli_query($conn, $insert)) {
+    echo "Account created successfully";
+    print "<br><a href='login.html'>Go to Login</a>";
 } else {
-    echo "Error: User already exists or data issue";
+    die("Signup failed");
 }
 
 mysqli_close($conn);

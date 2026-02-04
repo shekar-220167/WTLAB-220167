@@ -1,30 +1,25 @@
 <?php
-// Receive data from login form
-$id = $_POST['id'];
-$password = $_POST['password'];
+$id = $_POST['id'] ?? '';
+$password = $_POST['password'] ?? '';
 
-// Connect to MySQL (use IP + correct DB name)
-$conn = mysqli_connect("127.0.0.1", "root", "", "shekardb",3307);
-// 🔴 If your MySQL port is NOT 3306, change it here
+$conn = mysqli_connect("127.0.0.1", "root", "", "shekardb", 3307);
 
-// Check connection
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("Database connection failed");
 }
 
-// Check login details
-$sql = "SELECT * FROM login 
-        WHERE id='$id' AND password='$password'";
-
+$sql = "SELECT id FROM login WHERE password='$password'";
 $result = mysqli_query($conn, $sql);
 
-// Validate user
-if (mysqli_num_rows($result) > 0) {
-    echo "Login Successful";
-} else {
-    echo "Invalid ID or Password";
+if (!$result) {
+    die("Query execution failed");
 }
 
-// Close connection
+if (mysqli_num_rows($result) == 1) {
+    echo "Login successful. Welcome, $id!";
+} else {
+    echo "No account found. Please sign up.";
+}
+
 mysqli_close($conn);
 ?>

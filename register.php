@@ -1,40 +1,64 @@
 <?php
-// 1. Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // 2. Receive form data safely
-    $fname  = $_POST['fname'] ?? '';
-    $lname  = $_POST['lname'] ?? '';
-    $gender = $_POST['gender'] ?? '';
-    $year   = $_POST['year'] ?? '';
-    $course = $_POST['course'] ?? '';
-
-    // Checkbox handling
-    if (isset($_POST['branch'])) {
-        $branchList = implode(",", $_POST['branch']);
-    } else {
-        $branchList = '';
+    function cleanInput($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
     }
 
-    // 3. Database connection
-    $conn = mysqli_connect("localhost", "root", "", "shekardb", 3007);
+    $fname  = cleanInput($_POST['fname'] ?? '');
+    $lname  = cleanInput($_POST['lname'] ?? '');
+    $gender = cleanInput($_POST['gender'] ?? '');
+    $year   = cleanInput($_POST['year'] ?? '');
+    $course = cleanInput($_POST['course'] ?? '');
+
+    $fname = ucfirst(strtolower($fname));
+    $lname = ucfirst(strtolower($lname));
+
+    if (strlen($fname) < 2 || strlen($fname) > 30) {
+        die("First name must be between 2 and 30 characters");
+    }
+
+    if (strlen($lname) < 2 || strlen($lname) > 30) {
+        die("Last name must be between 2 and 30 characters");
+    }
+
+    if ($gender == '') {
+        die("Gender is required");
+    }
+
+    if ($year == '') {
+        die("Year is required");
+    }
+
+    if ($course == '') {
+        die("Course is required");
+    }
+
+    if (isset($_POST['branch']) && is_array($_POST['branch'])) {
+        $cleanBranches = array_map('cleanInput', $_POST['branch']);
+        $branchList = implode(",", $cleanBranches);
+    } else {
+        die("Please select at least one branch");
+    }
+
+    $conn = mysqli_connect("localhost", "root", "", "shekardb",3307);
 
     if (!$conn) {
-        die("Database connection failed: " . mysqli_connect_error());
+        die("Database connection failed");
     }
 
-    // 4. Insert query
-    $sql = "INSERT INTO users (fname, lname, gender, branch, year, course)
+    $sql = "INSERT INTO registration (fname, lname, gender, branch, year, course)
             VALUES ('$fname', '$lname', '$gender', '$branchList', '$year', '$course')";
 
-    // 5. Execute query
     if (mysqli_query($conn, $sql)) {
-        echo "✅ Registration Successful";
+        echo "Registration Successful";
     } else {
-        echo "❌ Registration Failed: " . mysqli_error($conn);
+        die("Registration Failed");
     }
 
-    // 6. Close connection
     mysqli_close($conn);
 }
 ?>
