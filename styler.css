@@ -199,7 +199,6 @@ button{
 
 
 
-
 /* .image{
     align-items: center;
     justify-content: center;
@@ -250,13 +249,38 @@ button{
     color: white;
 }
 
-form{
+.formal{
     width: 60%;
     margin: 30px auto;
     background-color: grey;
     padding: 20px;
     border-radius: 15px;
 }
+
+.upload {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.file-input {
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size:20px;
+    size: 16px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
 
 .profile-details{
     width:360px;
