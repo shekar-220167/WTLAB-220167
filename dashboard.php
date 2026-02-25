@@ -8,4 +8,6 @@ if(!isset($_SESSION['user'])){
 
 <h2>Welcome <?= $_SESSION['name']; ?></h2>
 
+<a href="update.php">Update Profile</a>
+<a href="delete.php">Delete Account</a>
 <a href="logout.php"><button>Logout</button></a>
