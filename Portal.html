@@ -120,7 +120,13 @@
                 <input type="submit" value="Upload" class="btn">
             </form>
         </div>
-
+        <div>
+            <form action="update.php" method="post">
+                Email: <input type="email" name="email"><br>
+                New Name: <input type="text" name="name"><br>
+                <button>Update</button>
+            </form>
+        </div>
         <script>
             cgpa=(a,b) => (a+b)/2;
             let avg=cgpa(8,9)

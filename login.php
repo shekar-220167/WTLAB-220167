@@ -1,25 +1,29 @@
 <?php
-$id = $_POST['id'] ?? '';
-$password = $_POST['password'] ?? '';
+require 'config/db.php';
+// require __DIR__ . '/vendor/autoload.php';
+// require __DIR__ . '/config/db.php';
+session_start();
 
-$conn = mysqli_connect("127.0.0.1", "root", "", "shekardb", 3307);
+if(isset($_POST['email']) && isset($_POST['password'])){
 
-if (!$conn) {
-    die("Database connection failed");
+$email=$_POST['email'];
+$password=$_POST['password'];
+
+$user=$users->findOne([
+    'email'=>$email,
+    'password'=>$password
+]);
+
+if($user){
+    $_SESSION['user']=$user['email'];
+    $_SESSION['name']=$user['name'];
+    header("Location: dashboard.php");
+    exit();
+}else{
+    echo "Invalid login";
 }
 
-$sql = "SELECT id FROM login WHERE password='$password'";
-$result = mysqli_query($conn, $sql);
-
-if (!$result) {
-    die("Query execution failed");
+}else{
+    echo "Please submit login form";
 }
-
-if (mysqli_num_rows($result) == 1) {
-    echo "Login successful. Welcome, $id!";
-} else {
-    echo "No account found. Please sign up.";
-}
-
-mysqli_close($conn);
 ?>

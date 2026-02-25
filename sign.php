@@ -1,32 +1,36 @@
 <?php
-$id = $_POST['id'] ?? '';
-$password = $_POST['password'] ?? '';
+require 'config/db.php';
 
-$conn = mysqli_connect("127.0.0.1", "root", "", "shekardb", 3307);
+if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])){
 
-if (!$conn) {
-    die("Database connection failed");
+$name=$_POST['name'];
+$email=$_POST['email'];
+$password=$_POST['password'];
+
+if(empty($name)||empty($email)||empty($password)){
+    echo "All fields required";
+    exit();
 }
 
-$check = "SELECT id FROM login WHERE id='$id'";
-$result = mysqli_query($conn, $check);
-
-if (!$result) {
-    die("Query failed");
+if(strlen($password)<6){
+    echo "Password must be 6 chars";
+    exit();
 }
 
-if (mysqli_num_rows($result) > 0) {
-    die("Account already exists. Please login.");
+$existing=$users->findOne(['email'=>$email]);
+
+if($existing){
+    echo "Duplicate user";
+}else{
+    $users->insertOne([
+        'name'=>$name,
+        'email'=>$email,
+        'password'=>$password
+    ]);
+    echo "Signup success";
 }
 
-$insert = "INSERT INTO login (id, password) VALUES ('$id', '$password')";
-
-if (mysqli_query($conn, $insert)) {
-    echo "Account created successfully";
-    print "<br><a href='login.html'>Go to Login</a>";
-} else {
-    die("Signup failed");
+}else{
+    echo "Please submit signup form";
 }
-
-mysqli_close($conn);
 ?>

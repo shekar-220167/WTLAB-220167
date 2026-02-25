@@ -12,13 +12,19 @@ class ComposerStaticInit5cd48b6645860e6f71f44390d4549abe
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '1f87db08236948d07391152dccb70f04' => __DIR__ . '/..' . '/google/apiclient-services/autoload.php',
         'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
+        '606a39d89246991a373564698c2d8383' => __DIR__ . '/..' . '/symfony/polyfill-php85/bootstrap.php',
         'a8d3953fd9959404dd22d3dfcd0a79f0' => __DIR__ . '/..' . '/google/apiclient/src/aliases.php',
+        '3a37ebac017bc098e9a86b35401e7a68' => __DIR__ . '/..' . '/mongodb/mongodb/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'p' =>
         array (
             'phpseclib3\\' => 11,
+        ),
+        'S' =>
+        array (
+            'Symfony\\Polyfill\\Php85\\' => 23,
         ),
         'P' =>
         array (
@@ -31,6 +37,7 @@ class ComposerStaticInit5cd48b6645860e6f71f44390d4549abe
         'M' =>
         array (
             'Monolog\\' => 8,
+            'MongoDB\\' => 8,
         ),
         'G' =>
         array (
@@ -51,6 +58,10 @@ class ComposerStaticInit5cd48b6645860e6f71f44390d4549abe
         'phpseclib3\\' =>
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
+        ),
+        'Symfony\\Polyfill\\Php85\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php85',
         ),
         'Psr\\Log\\' =>
         array (
@@ -76,6 +87,10 @@ class ComposerStaticInit5cd48b6645860e6f71f44390d4549abe
         'Monolog\\' =>
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'MongoDB\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/mongodb/mongodb/src',
         ),
         'GuzzleHttp\\Psr7\\' =>
         array (
@@ -129,6 +144,7 @@ class ComposerStaticInit5cd48b6645860e6f71f44390d4549abe
         'Google_Task_Retryable' => __DIR__ . '/..' . '/google/apiclient/src/aliases.php',
         'Google_Task_Runner' => __DIR__ . '/..' . '/google/apiclient/src/aliases.php',
         'Google_Utils_UriTemplate' => __DIR__ . '/..' . '/google/apiclient/src/aliases.php',
+        'NoDiscard' => __DIR__ . '/..' . '/symfony/polyfill-php85/Resources/stubs/NoDiscard.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

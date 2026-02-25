@@ -1,15 +1,9 @@
 <?php
-$uploadDir = "uploads/";
+    require 'config/db.php';
 
-if(isset($_GET['file'])){
-    $file = basename($_GET['file']);
-    $filepath = $uploadDir . $file;
+    $email=$_GET['email'];
 
-    if(file_exists($filepath)){
-        unlink($filepath);
-    }
-}
+    $users->deleteOne(['email'=>$email]);
 
-header("Location: index.php");
-exit;
+    echo "User deleted";
 ?>
