@@ -22,8 +22,8 @@
 
     echo "<br>";
 
-    echo" My name:{$name} <br> Age:{$age} <br> CGPA:{$cgpa} <br> Status:{$status} <br>";
-    
+    echo" My name:$name <br> Age:{$age} <br> CGPA:{$cgpa} <br> Status:{$status} <br>";
+
     $subjects=array("WT","DSP","COA","CD");
     print_r($subjects);
 

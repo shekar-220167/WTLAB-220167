@@ -31,11 +31,9 @@
     echo "<br> Right trimming of the string:".rtrim($aizen);
 
     //String Comparison
-    echo "<br> String comparison:".strcmp($aizen,$ichigo);
-    echo "<br> String case comparison:".strcasecmp($aizen,$ichigo);
-    
+    echo "<br> String comparison:".strcmp($ichigo,$aizen);
+    echo "<br> String case comparison:".strcasecmp($aizen,$ichigo); 
     //Special characters and Security
     echo "<br> ".htmlspecialchars("<a href='login.php'>Click here</a>");
     echo "<br> ".addlashes("Shekar's book");
-
 ?>
