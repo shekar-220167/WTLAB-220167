@@ -7,7 +7,7 @@
             header('Content-Description: File Transfer');
             header('Content-Type: application/octet-stream');
             header("Content-Disposition: attachment; filename=\"" .$fileName."\"");
-            header($filesize($filePath));
+            header("Content-Length: " . filesize($filePath));
             readfile($filePath);
             exit;
         }

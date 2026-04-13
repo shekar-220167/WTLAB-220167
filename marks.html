@@ -1,47 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Marks</title>
-        <link rel="stylesheet" href="styler.css">
-    </head>
-    <body>
-        <div class="header">
-            <h1>Marks</h1>
-            <a href="portal.html">Home</a>
-        </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styler.css">
+</head>
+<body>
+    <div class="header">
+        <label for="menu-toggle" class="menu-btn" style="visibility: hidden;">&#9776;</label>
         <div>
-            <table style="border-collapse:collapse; border-radius: 15px; margin: 20px auto;">
+            <a href="index.php">Home</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </div>
+    
+    <h1 class="page-title">Marks Details</h1>
+
+    <div style="display:flex; justify-content:center; padding: 0 20px;">
+        <table class="cells glass">
+            <thead>
                 <tr>
-                    <th style="border:1px solid black; padding:10px;">subject</th>
-                    <th style="border:1px solid black; padding:10px;">marks</th>
-                    <th style="border:1px solid black; padding:10px;">grade</th>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Web Technologies</td>
+                    <td>85</td>
+                    <td><span style="color: var(--success); font-weight: bold;">A</span></td>
                 </tr>
                 <tr>
-                    <td style="border:1px solid black; padding:10px;">Web Technologies</td>
-                    <td style="border:1px solid black; padding:10px;">85</td>
-                    <td style="border:1px solid black; padding:10px;">A</td>
+                    <td>Digital Signal Processing</td>
+                    <td>80</td>
+                    <td><span style="color: var(--accent); font-weight: bold;">B</span></td>
                 </tr>
                 <tr>
-                    <td style="border:1px solid black; padding:10px;">Digital Signal Processing</td>
-                    <td style="border:1px solid black; padding:10px;">80</td>
-                    <td style="border:1px solid black; padding:10px;">B</td>
+                    <td>Compiler Design</td>
+                    <td>90</td>
+                    <td><span style="color: #fbbf24; font-weight: bold;">Ex</span></td>
                 </tr>
                 <tr>
-                    <td style="border:1px solid black; padding:10px;">Compiler Design</td>
-                    <td style="border:1px solid black; padding:10px;">90</td>
-                    <td style="border:1px solid black; padding:10px;">Ex</td>
+                    <td>COA</td>
+                    <td>75</td>
+                    <td><span style="color: var(--text); font-weight: bold;">C</span></td>
                 </tr>
                 <tr>
-                    <td style="border:1px solid black; padding:10px;">COA</td>
-                    <td style="border:1px solid black; padding:10px;">75</td>
-                    <td style="border:1px solid black; padding:10px;">C</td>
+                    <td>IOR</td>
+                    <td>88</td>
+                    <td><span style="color: var(--success); font-weight: bold;">A</span></td>
                 </tr>
-                <tr>
-                    <td style="border:1px solid black; padding:10px;">IOR</td>
-                    <td style="border:1px solid black; padding:10px;">88</td>
-                    <td style="border:1px solid black; padding:10px;">A</td>
-                </tr>
-            </table>
-        </div><br>
-    </body>
+            </tbody>
+        </table>
+    </div>
+</body>
 </html>

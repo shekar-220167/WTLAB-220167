@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'config.php';
 
 if (isset($_GET['code'])) {
@@ -9,8 +10,8 @@ if (isset($_GET['code'])) {
     $google_service = new Google_Service_Oauth2($client);
     $data = $google_service->userinfo->get();
 
-    $_SESSION['user_name'] = $data->name;
-    $_SESSION['user_email'] = $data->email;
+    $_SESSION['name'] = $data->name;
+    $_SESSION['user'] = $data->email;
     $_SESSION['user_image'] = $data->picture;
 
     header("Location: dashboard.php");

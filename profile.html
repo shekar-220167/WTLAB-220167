@@ -1,20 +1,48 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Profile</title>
-        <link rel=stylesheet href="styler.css">
-    </head>
-    <body>
-        <div class="header">
-            <h1>Profile</h1>
-            <a href="portal.html">Home</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styler.css">
+</head>
+<body>
+    <div class="header">
+        <label for="menu-toggle" class="menu-btn" style="visibility: hidden;">&#9776;</label>
+        <div>
+            <a href="index.php">Home</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="marks.html">Marks</a>
         </div>
-        <div class="profile-details">
-            <h2>Student Profile</h2>
-            <p><b>Name:</b> Shekar Babu</p>
-            <p><b>ID NUMBER:</b> N220167</p>
-            <p><b>Branch:</b> CSE</p>
-            <p><b>Year:</b> E-2</p>
-            <p><b>Email:</b>n220167@rguktn.ac.in</p>
-    </body>
+    </div>
+    
+    <h1 class="page-title">User Profile</h1>
+
+    <div class="profile-details glass" style="display: flex; flex-direction: column; align-items: center;">
+        <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 36px; font-weight: bold; margin-bottom: 20px;">
+            SB
+        </div>
+        <h2 style="color: var(--text); margin-top: 0;">Shekar Babu</h2>
+        
+        <div style="width: 100%; margin-top: 20px; border-top: 1px solid var(--border); padding-top: 20px;">
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <span style="color: var(--text-muted);">ID Number</span>
+                <span style="font-weight: 500;">N220167</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <span style="color: var(--text-muted);">Branch</span>
+                <span style="font-weight: 500;">CSE</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <span style="color: var(--text-muted);">Year</span>
+                <span style="font-weight: 500;">E-2</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                <span style="color: var(--text-muted);">Email</span>
+                <span style="font-weight: 500;">n220167@rguktn.ac.in</span>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

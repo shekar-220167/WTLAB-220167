@@ -1,54 +1,50 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            .internal-table{
-                border-collapse:collapse;
-                border-radius:15px;
-                padding:10px;
-                margin:20px auto;
-            }
-            .internal-th,.internal-td{
-                border:2px solid black;
-                border-collapse:collapse;
-                border-radius:15px;
-                padding:10px;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styler.css">
+</head>
+<body>
+    <div class="header">
+        <label for="menu-toggle" class="menu-btn" style="visibility: hidden;">&#9776;</label>
+        <div>
+            <a href="index.php">Home</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </div>
+    
+    <h1 class="page-title">Attendance Details</h1>
 
-            }
-        </style>
-        <title>attendance</title>
-        <link rel="stylesheet" href="styler.css">
-        
-    </head>
-    <body>
-        <div class="header">
-            <h1>Attendance</h1>
-            <a href="portal.html">Home</a>
-        </div>
-         <div>
-            <table class="internal-table">
-                <caption><h2 style="color:  pink;">Attendace Details:</h2></caption>
+    <div style="display:flex; justify-content:center; padding: 0 20px;">
+        <table class="cells glass">
+            <thead>
                 <tr>
-                    <th class="internal-th">Subject</th>
-                    <th class="internal-th">Attendance</th>
+                    <th>Subject</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Web Technologies</td>
+                    <td><span style="color: var(--success); font-weight: bold;">81%</span></td>
                 </tr>
                 <tr>
-                    <td class="internal-td">Web Technologies</td>
-                    <td class="internal-td">81%</td>
+                    <td>Digital Signal Processing</td>
+                    <td><span style="color: var(--success); font-weight: bold;">94%</span></td>
                 </tr>
                 <tr>
-                    <td class="internal-td">Digital Signal Processing</td>
-                    <td class="internal-td">94%</td>
+                    <td>Compiler Design</td>
+                    <td><span style="color: var(--success); font-weight: bold;">79%</span></td>
                 </tr>
                 <tr>
-                    <td class="internal-td">Compiler Desing</td>
-                    <td class="internal-td">79%</td>
+                    <td>COA</td>
+                    <td><span style="color: var(--success); font-weight: bold;">85%</span></td>
                 </tr>
-                <tr>
-                    <td class="internal-td">COA</td>
-                    <td class="internal-td">85%</td>
-                </tr>
-            </table>
-        </div>
-    </body>
+            </tbody>
+        </table>
+    </div>
+</body>
 </html>
